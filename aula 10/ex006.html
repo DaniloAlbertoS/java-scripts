@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos Dom</title>
+    <style>
+        #area{
+            background-color: rgb(5, 83, 83);
+            color: white;
+            width: 800px;
+            height: 800px;
+            line-height: 800px;
+            text-align: center;
+            font-size: 30pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+        <div id="area" onmousemove="moveu()" onmouseout="saiu()">
+        interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrou)
+       
+        function clicar() {
+             
+            
+            a.innerText = 'clicou!'
+            a.style.background = 'blue'
+            
+        }
+        function entrou() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'entrou!'
+            
+            
+        }
+        function saiu() {
+            var a = document.getElementById('area')
+            a.innerText = 'saiu!'
+          a.style.background = 'rgb(5, 83, 83)'
+        }
+        function moveu() {
+            var a = window.document.getElementById('area')
+            a.style.background = 'pink'
+            a.innerText = 'nesta foto tinhamos 20 anos'      
+         }
+       </script>
+</body>
+</html>
